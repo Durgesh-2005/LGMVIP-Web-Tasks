@@ -2,9 +2,53 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background: linear-gradient(to right, #7582a1,#475983);
+
+/* Pre-loader styles */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* Background color for the pre-loader */
+    z-index: 9999;
+    /* Higher z-index ensures the pre-loader appears on top of other content */
 }
+
+.loader {
+    border: 4px solid #f3f3f3;
+    /* Light gray border for the loader */
+    border-top: 4px solid #3498db;
+    /* Blue border for the rotating part of the loader */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+    /* Animation to rotate the loader */
+}
+
+.preloader.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background: linear-gradient(to right, #7582a1, #475983);
+}
+
 header p {
     text-align: center;
     text-transform: uppercase;
@@ -37,25 +81,30 @@ header h1 {
     cursor: default;
     overflow-y: auto;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 5px;
-    
+
 }
 
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
     height: 100px;
-  }::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
     height: 100px;
-  }
-  ::-webkit-scrollbar-button:start:decrement,
-  ::-webkit-scrollbar-button:end:increment {
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
     display: block;
     height: 5px;
     background-color: transparent;
-  }  
+}
+
 .container p {
     text-align: center;
     font-size: 25px;
@@ -73,7 +122,7 @@ header h1 {
 .input-section input {
     width: 460px;
     height: 30px;
-    padding-right: 0px; /* Remove redundant padding property */
+    padding-right: 0px;
     margin-right: 0;
     outline: none;
     padding: 5px;
@@ -92,9 +141,10 @@ header h1 {
     border: none;
     cursor: pointer;
 }
-body #clearBtn {
+
+#clearBtn {
     position: static;
-    margin-left:44%;
+    margin-left: 38%;
     margin-bottom: 30px;
     padding: 15px;
     outline: none;
@@ -103,7 +153,17 @@ body #clearBtn {
     cursor: pointer;
 }
 
-.input-section button:hover{
+#gitBtn {
+    position: static;
+    margin: 0 auto;
+    padding: 15px;
+    outline: none;
+    background-color: #f1c40f;
+    border: none;
+    cursor: pointer;
+}
+
+.input-section button:hover {
 
     box-shadow: #35493e;
 
@@ -115,7 +175,8 @@ body #clearBtn {
     background-color: rgb(46, 56, 65);
 }
 
-.container #todoList,#completedTasks {
+.container #todoList,
+#completedTasks {
     list-style: none;
     margin: 20px;
 }
@@ -139,7 +200,7 @@ footer {
     margin-top: -1px;
     margin-bottom: -1px;
     padding: 10px;
-    border: 2px solid #eee;  
+    border: 2px solid #eee;
 }
 
 #todoList .taskInput {
@@ -150,6 +211,7 @@ footer {
     width: 89%;
     color: azure;
 }
+
 #completedTasks button {
     border: none;
     background-color: rgb(46, 56, 65);
@@ -176,15 +238,16 @@ input[type="checkbox"] {
     border: 2px solid #ccc;
     background-color: #fff;
     border-radius: 4px;
-    vertical-align: middle; /* Align checkbox and label in the same line */
+    vertical-align: middle;
+    /* Align checkbox and label in the same line */
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
     color: white;
 }
 
-input[type="checkbox"]:checked + .taskInput {
+input[type="checkbox"]:checked+.taskInput {
     text-decoration: line-through;
     color: #e03434;
     /* You can change the color here */
@@ -198,42 +261,19 @@ input[type="checkbox"]:checked + .taskInput {
     .input-section input {
         max-width: 250px;
     }
-    #todoList .taskInput{
+
+    #todoList .taskInput {
         max-width: 80%;
         min-width: 50%;
     }
-}
-/* Pre-loader styles */
-.preloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; /* Background color for the pre-loader */
-    z-index: 9999; /* Higher z-index ensures the pre-loader appears on top of other content */
-}
-
-.loader {
-    border: 4px solid #f3f3f3; /* Light gray border for the loader */
-    border-top: 4px solid #3498db; /* Blue border for the rotating part of the loader */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1.5s linear infinite; /* Animation to rotate the loader */
-}
-.preloader.hidden {
-    display: none;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+    #clearBtn{
+        margin-left: 25%;
     }
-    100% {
-        transform: rotate(360deg);
+    #gitBtn{
+        margin-left: 27%;
+        margin-bottom: 20px;
+    }
+    #completedTasks .taskInput {
+        width: 81%;
     }
 }

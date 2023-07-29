@@ -44,7 +44,9 @@
         </ul>
 
     </div>
+
     <button id="clearBtn">New Page/Clear Data</button>
+    <button id="gitBtn">Download Code <i class="uil uil-github"></i></button>
     <footer>Designed by Durgesh</footer>
     <script src="./index.js"></script>
     <script>
@@ -69,6 +71,26 @@
             // Hide the pre-loader by adding 'hidden' class
             preloader.classList.add('hidden');
         });
+    </script>
+    <script>
+        const disabledKeys = ["u", "I"];
+
+        const showAlert = e => {
+            e.preventDefault();
+            return alert("Sorry, you can't view or copy source codes this way!");
+        }
+
+        document.addEventListener("contextmenu", e => {
+            showAlert(e);
+        });
+
+        document.addEventListener("keydown", e => {
+            if (e.ctrlKey && disabledKeys.includes(e.key) || e.key === "F12") {
+                showAlert(e);
+            }
+        });
+
+
     </script>
 
 </body>

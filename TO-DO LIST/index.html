@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" content="TO-DO List Web Application">
+    <meta property="og:description"
+        content="The TO-DO List Web Application is a simple and easy-to-use tool that helps you stay organized and on top of your tasks. With this app, you can create lists of tasks, set due dates, and track your progress. You can also share your lists with others, so you can collaborate on projects or simply keep each other accountable.">
+    <meta name="keywords"
+        content="to-do list, web application, productivity, organization, tasks, due dates, progress tracking, collaboration, accountability">
+    <link rel="shortcut icon" href="../TODO Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <!--FonstAwsome-->
+    <script src="https://kit.fontawesome.com/be1c87c3f5.js" crossorigin="anonymous"></script>
+    <!--Unicons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>TO-DO List</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <header onselectstart="return false" ;>
+        <h1>TO-DO <span class="bi bi-clipboard-plus"></span> List</h1>
+        <p>Make Your Day More productive</p>
+    </header>
+    <div class="container" onselectstart="return false">
+        <p>Tasks TO DO Today</p>
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder=" Enter your task">
+            <button id="addBtn">Add <i class="uil uil-notes note-icon"></i>
+            </button>
+        </div>
+
+        <ul id="todoList">
+            <!-- TODO items will be added here -->
+        </ul>
+        <!-- Add this below the main list -->
+        <p>Completed Tasks</p>
+        <ul id="completedTasks">
+
+        </ul>
+
+    </div>
+    <button id="clearBtn">New Page/Clear Data</button>
+    <footer>Designed by Durgesh</footer>
+    <script src="./index.js"></script>
+    <script>
+        const clearBtn = document.getElementById('clearBtn');
+        clearBtn.addEventListener('click', confirmClearLocalStorage);
+
+        function confirmClearLocalStorage() {
+            if (confirm('Are you sure you want to clear Data? This will remove all saved tasks and gives new page')) {
+                localStorage.clear();
+                location.reload();
+            } else {
+                alert('Data was not cleared.');
+            }
+        }
+    </script>
+    <script>
+        // Wait for the window to fully load
+        window.addEventListener('load', function () {
+            // Get the pre-loader element
+            const preloader = document.querySelector('.preloader');
+
+            // Hide the pre-loader by adding 'hidden' class
+            preloader.classList.add('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

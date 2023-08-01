@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2rem;
+    background-color: rgb(228, 243, 255);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(84, 84, 84);
+}
+
+#usersIntBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+    /* Add some margin-top for spacing */
+    background-color: chocolate;
+    cursor: pointer;
+}
+
+.userCallBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+    /* Add some margin-top for spacing */
+    background-color: chocolate;
+}
+
+.userBtn {
+    display: none;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.userBtn.show{
+    display: flex;
+    opacity: 1;
+}
+
+#usersCallBtn1,
+#usersCallBtn2,
+#usersCallBtn3,
+#usersCallBtn4,
+#usersCallBtn5,
+#usersCallBtn6 {
+    display: none;
+    cursor: pointer;
+}
+
+#userCard {
+    margin-top: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#userCard.show{
+    display: block;
+    opacity: 1;
+}

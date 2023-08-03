@@ -3,6 +3,39 @@
     padding: 0;
 }
 
+/*Pre Loader*/
+#preloader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -40,7 +73,6 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 15px;
     margin: 20px auto;
-    /* Add some margin-top for spacing */
     background-color: chocolate;
     cursor: pointer;
 }
@@ -53,7 +85,6 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 15px;
     margin: 20px auto;
-    /* Add some margin-top for spacing */
     background-color: chocolate;
 }
 
@@ -63,7 +94,8 @@ nav ul li a:hover {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-.userBtn.show{
+
+.userBtn.show {
     display: flex;
     opacity: 1;
 }
@@ -84,10 +116,61 @@ nav ul li a:hover {
     margin: 0 auto;
     text-align: center;
     opacity: 0;
+    border: 2px solid black;
     transition: opacity 0.5s ease-in-out;
 }
 
-#userCard.show{
+#userCard.show {
     display: block;
     opacity: 1;
+}
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #usersIntBtn {
+        margin: 10px auto;
+    }
+
+    .userCallBtn {
+        margin: 10px auto;
+    }
+
+    .userBtn {
+        flex-direction: column;
+    }
+
+    .userBtn button {
+        margin: 10px 0;
+    }
+
+    .userBtn.show {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #usersCallBtn1,
+    #usersCallBtn2,
+    #usersCallBtn3,
+    #usersCallBtn4,
+    #usersCallBtn5,
+    #usersCallBtn6 {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+
+    }
 }

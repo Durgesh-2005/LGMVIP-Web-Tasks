@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    background-color: #19144b;
+}
+
 /*Pre Loader*/
 #preloader {
     display: none;
@@ -36,13 +40,17 @@
     }
 }
 
+h1{
+    color: #fef8fd;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 70px;
     padding: 0 2rem;
-    background-color: rgb(228, 243, 255);
+    background-color: #130f40;
 }
 
 nav ul {
@@ -57,12 +65,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #fef8fd;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: rgb(84, 84, 84);
+    color: rgb(203, 203, 203);
 }
 
 #usersIntBtn {
@@ -73,7 +81,7 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 15px;
     margin: 20px auto;
-    background-color: chocolate;
+    background-color: #ffec78;
     cursor: pointer;
 }
 
@@ -85,7 +93,7 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 15px;
     margin: 20px auto;
-    background-color: chocolate;
+    background-color: #ffec78;
 }
 
 .userBtn {
@@ -116,13 +124,39 @@ nav ul li a:hover {
     margin: 0 auto;
     text-align: center;
     opacity: 0;
-    border: 2px solid black;
+    border: 2px solid #fef8fd;
+    border-radius: 5px;
+    max-width: max-content;
     transition: opacity 0.5s ease-in-out;
+}
+
+
+b{
+    color: #fef8fd;
+}
+
+p{
+    color: #93a3b6;
+}
+
+i{
+    color: #ffec78;
 }
 
 #userCard.show {
     display: block;
     opacity: 1;
+}
+footer {
+    text-align: center;
+    background-color: #1e1633;
+    color: #93a3b6;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 @media (max-width: 767px) {

@@ -1,5 +1,6 @@
 # LGMVIP-Web Development Tasks
- <style>
+
+<style>
         table {
             width: 100%;
             border-collapse: collapse;
@@ -52,3 +53,4 @@
             </tr>
         </tbody>
     </table>
+

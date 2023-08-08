@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FonstAwsome-->
+    <script src="https://kit.fontawesome.com/be1c87c3f5.js" crossorigin="anonymous"></script>
+    <!--Style CSS File-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Enrollment Form</title>
+</head>
+
+<body onselectstart="return ">
+    <!--Nav Bar For Navigation and added the onselectstart attribute to make user can't select the text-->
+    <nav onselectstart="return false">
+        <h1>Student Enrollment Form</h1>
+        <ul>
+            <!--For Redircting Home Page-->
+            <li><a href="index.html"><i class='fa-solid fa-house'></i>
+                    Home </a></li>
+            <!--Check out my PS Website-->
+            <li><a href="https://focusquest.netlify.app/portfolio" target="_blank"><i class='fa fa-phone-square'></i>
+                    Contact </a></li>
+            <!--My GitHub Link-->
+            <li><a href="https://github.com/Durgesh-2005" target="_blank"><i class='fa fa-github'></i>
+                    GitHub</a></li>
+            <!--My LinkedIn Link-->
+            <li><a href="https://linkedin.com/in/vaigandladurgesh" target="_blank"><i class='fa fa-linkedin-square'></i>
+                    LinkedIn</a></li>
+        </ul>
+    </nav>
+    <!--Form for getting Student Details-->
+    <form onselectstart="return false" class="enrollment-form">
+        <fieldset>
+            <legend>Enrollment Form</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Your Email"><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" placeholder="Enter Your Website Link"><br>
+
+            <label for="imglink">Image link:</label>
+            <input type="url" id="imglink" placeholder="Enter Your Image Link"><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" id="male">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="preferNotSay">Prefer not to say<br>
+
+            <label>Skills:</label>
+            <input type="checkbox" name="skills" id="html">HTML
+            <input type="checkbox" name="skills" id="css">CSS
+            <input type="checkbox" name="skills" id="js">JavaScript <br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+    <!--A Container for displaying the Enrolled Students-->
+    <div onselectstart="return false" id="Enrolled-students" class="container2">
+        <h2><u>Enrolled Students</u></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3">Description</th>
+                    <th>Photo</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <!--Footer-->
+    <footer>Designed by Durgesh✌️</footer>
+    <!--JScript File-->
+    <script src="script.js"></script>
+</body>
+
+</html>

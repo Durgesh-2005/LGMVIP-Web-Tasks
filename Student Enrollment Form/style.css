@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #F0F4EF;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2rem;
+    background-color: #5EAAA8;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #F9ED69;
+}
+
+nav h1 {
+    color: #ffffff;
+}
+
+.container2 {
+    max-width: 50%;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+legend {
+    font-size: large;
+    font-weight: bold;
+    color: #F08A5D;
+}
+
+.enrollment-form {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid #F08A5D;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    cursor: default;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #3C6382;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 0px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: #F08A5D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container2 {
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 75%;
+    min-height: 500px;
+    padding-bottom: 50px;
+    cursor: default;
+
+}
+
+.container2 h2 {
+    text-align: center;
+    padding: 10px;
+    color: #B83B5E;
+}
+
+.container2 table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #3C6382;
+    background-color: #F6F6F6;
+    min-width: 50%;
+    max-width: 75%;
+}
+
+th {
+    background-color: #F08A5D;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+th,
+td {
+    border: 1px solid #bdc3c7;
+    padding: 5px;
+    text-align: left;
+    color: #34495e;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.details span {
+    font-weight: 600;
+    color: #5EAAA8;
+}
+
+td a {
+    text-decoration: none;
+    color: #5EAAA8;
+}
+
+td img {
+    width: 35mm;
+    height: 45mm;
+    object-fit: cover;
+}
+
+td p {
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+td button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 18px;
+    background-color: #F08A5D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #FF0909;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #6e6e6e;
+    color: #eee;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        font-size: x-small;
+    }
+
+    nav h1 {
+        text-align: center;
+        font-size: large;
+    }
+
+    .enrollment-form {
+        min-width: 90%;
+    }
+
+    .container2 table {
+
+        padding: -20px;
+        font-size: xx-small;
+        margin: 0 auto;
+    }
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    .enrollment-form {
+        display: none;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    table td {
+        width: 100%;
+    }
+
+    td button {
+        display: none;
+    }
+
+}

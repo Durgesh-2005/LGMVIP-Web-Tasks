@@ -75,7 +75,19 @@
     <footer>Designed by Durgesh✌️</footer>
     <!--JScript File-->
     <script src="index.js"></script>
-
+    <script>
+        if (navigator.onLine) {
+          // When the user is online
+        } else {
+          // When the user is offline load the cached files.
+          var cachedFiles = ["index.html", "style.css", "script.js", "calculator.png"];
+          for (var i = 0; i < cachedFiles.length; i++) {
+            var element = document.createElement("script");
+            element.src = cachedFiles[i];
+            document.body.appendChild(element);
+          }
+        }
+        </script>
 </body>
 
 </html>

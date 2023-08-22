@@ -17,5 +17,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "offlineResources": ["index.html", "style.css", "script.js", "calculator.png"]
 }

@@ -18,5 +18,5 @@
       "type": "image/png"
     }
   ],
-  "offlineResources": ["index.html", "style.css", "script.js", "calculator.png"]
+  "offlineResources": ["index.html", "index.css", "index.js", "calculator.png"]
 }

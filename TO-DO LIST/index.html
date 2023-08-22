@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Durgesh Vaigandla">
     <meta name="og:title" content="TO-DO List Web Application">
     <meta property="og:description"
         content="The TO-DO List Web Application is a simple and easy-to-use tool that helps you stay organized and on top of your tasks. With this app, you can create lists of tasks, set due dates, and track your progress. You can also share your lists with others, so you can collaborate on projects or simply keep each other accountable.">
     <meta name="keywords"
-        content="to-do list, web application, productivity, organization, tasks, due dates, progress tracking, collaboration, accountability">
-    <link rel="shortcut icon" href="./assest/TODO Favicon.png" type="image/x-icon">
+        content="Vaigandla Durgesh,Durgesh Vaigandla,todo list,todo-list, web application, productivity, organization, tasks, due dates, progress tracking, collaboration, accountability">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://todotask014.netlify.app/todo-list.png">
+    <link rel="shortcut icon" href="./todo-list.png" type="image/x-icon">
+    <!--Google Verification SEO -->
+    <meta name="google-site-verification" content="ihEcbWW_MLmOyQngEN9PzU44dsMQEw7Hu9fQWQtQVvA" />
+    <link rel="canonical" href="https://todotask014.netlify.app">
     <link rel="stylesheet" href="./index.css">
+    <!--Adding Manifest.JSON-->
+    <link rel="manifest" href="manifest.json">
     <!--FonstAwsome-->
     <script src="https://kit.fontawesome.com/be1c87c3f5.js" crossorigin="anonymous"></script>
     <!--Unicons-->
@@ -92,7 +101,19 @@
 
 
     </script>
-
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
